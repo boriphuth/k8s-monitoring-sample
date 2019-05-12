@@ -11,5 +11,5 @@ spec:
         paths:
           - path: /app(/|$)(.*)
             backend:
-              serviceName: grpc-opencensus-sample
+              serviceName: k8s-monitoring-sample
               servicePort: 8080
