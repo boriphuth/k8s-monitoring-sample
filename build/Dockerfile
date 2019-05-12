@@ -1,7 +1,7 @@
 FROM golang:1.12
 
-ADD . /workdir/app
-WORKDIR /workdir/
+ADD . /workdir/
+WORKDIR /workdir
 
 RUN go build -o app .
 
