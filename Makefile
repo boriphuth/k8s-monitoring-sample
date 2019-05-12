@@ -4,11 +4,17 @@ go-build:
 go-run:
 	./app
 
+docker-build:
+	docker build -f build/Dockerfile -t soichisumi0/k8s-monitoring-sample:v1.0 .
+
 use-local-image:
 	eval \$\(minikube docker-env\)
 
 minikube-start:
 	minikube start
+
+minikube-delete:
+	minikube delete
 
 minikube-ip:
 	minikube ip

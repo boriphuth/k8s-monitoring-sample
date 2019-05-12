@@ -11,6 +11,10 @@ func main(){
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("this is simple server"))
 	})
+	http.HandleFunc("/healthcheck", func(w http.ResponseWriter, r *http.Request){
+		w.WriteHeader(http.StatusOK)
+		w.Write([]byte("this is simple server"))
+	})
 	http.HandleFunc("/success", func(w http.ResponseWriter, r *http.Request){
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("OK"))
