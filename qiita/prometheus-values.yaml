@@ -1,0 +1,19 @@
+alertmanager:
+  ingress:
+    enabled: true
+    hosts:
+      - alertmanager.local
+  persistentVolume:
+    size: 1Gi
+    storageClass: "hostpath"
+server:
+  ingress:
+    enabled: true
+    hosts:
+      - prometheus.local
+  persistentVolume:
+    size: 1Gi
+    storageClass: "hostpath"
+  retention: "12h"
+pushgateway:
+  enabled: false

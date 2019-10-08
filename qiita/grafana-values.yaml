@@ -1,0 +1,8 @@
+ingress:
+  enabled: true
+  hosts:
+    - grafana.local
+persistence:
+  enabled: true
+  storageClassName: "hostpath"
+  size: 1Gi
